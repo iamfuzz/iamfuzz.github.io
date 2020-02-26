@@ -1,0 +1,128 @@
+{
+  "facets": [
+    {
+      "name": "ip-172-20-49-55",
+      "results": [
+        {
+          "latest": 16.119121551513672
+        }
+      ]
+    },
+    {
+      "name": "ip-172-20-62-157",
+      "results": [
+        {
+          "latest": 11.576553344726562
+        }
+      ]
+    },
+    {
+      "name": "ip-172-20-55-12",
+      "results": [
+        {
+          "latest": 11.098073959350586
+        }
+      ]
+    },
+    {
+      "name": "ip-172-20-56-216",
+      "results": [
+        {
+          "latest": 10.366976737976074
+        }
+      ]
+    },
+    {
+      "name": "ip-172-20-50-107",
+      "results": [
+        {
+          "latest": 10.183917045593262
+        }
+      ]
+    },
+    {
+      "name": "ip-172-31-29-136.us-east-2.compute.internal",
+      "results": [
+        {
+          "latest": 8.274214744567871
+        }
+      ]
+    },
+    {
+      "name": "ip-172-20-53-1",
+      "results": [
+        {
+          "latest": 8.206557273864746
+        }
+      ]
+    },
+    {
+      "name": "ip-172-31-2-229",
+      "results": [
+        {
+          "latest": 7.233333110809326
+        }
+      ]
+    },
+    {
+      "name": "ip-172-20-43-195",
+      "results": [
+        {
+          "latest": 7.066333293914795
+        }
+      ]
+    },
+    {
+      "name": "ip-172-31-10-216",
+      "results": [
+        {
+          "latest": 6.593100070953369
+        }
+      ]
+    }
+  ],
+  "totalResult": {
+    "results": [
+      {
+        "latest": 3.646735191345215
+      }
+    ]
+  },
+  "unknownGroup": {
+    "results": [
+      {
+        "latest": 1.1330276727676392
+      }
+    ]
+  },
+  "metadata": {
+    "eventTypes": [
+      "ComputeSample"
+    ],
+    "eventType": "ComputeSample",
+    "openEnded": true,
+    "beginTime": "2020-02-26T20:24:47Z",
+    "endTime": "2020-02-26T21:24:47Z",
+    "beginTimeMillis": 1582748687168,
+    "endTimeMillis": 1582752287168,
+    "rawSince": "60 MINUTES AGO",
+    "rawUntil": "NOW",
+    "rawCompareWith": "",
+    "guid": "fab89b37-ce57-d7dc-f412-f272bfd8b9e0",
+    "routerGuid": "94d3f687-4c1b-3cf0-5c7d-22c5728c02ca",
+    "messages": [],
+    "facet": "hostname",
+    "offset": 0,
+    "limit": 10,
+    "contents": {
+      "messages": [],
+      "contents": [
+        {
+          "function": "latest",
+          "attribute": "provider.cpuUtilization.Average",
+          "simple": true
+        }
+      ]
+    }
+  }
+}

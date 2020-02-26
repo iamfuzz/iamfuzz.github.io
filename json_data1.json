@@ -1,0 +1,128 @@
+{
+  "facets": [
+    {
+      "name": "Billing Service_AWS",
+      "results": [
+        {
+          "latest": "exceptions:AssertionError"
+        }
+      ]
+    },
+    {
+      "name": "Inventory Service_OP",
+      "results": [
+        {
+          "latest": "URIError"
+        }
+      ]
+    },
+    {
+      "name": "Inventory Service_AWS",
+      "results": [
+        {
+          "latest": "URIError"
+        }
+      ]
+    },
+    {
+      "name": "Promo Service_OP",
+      "results": [
+        {
+          "latest": "System.ApplicationException"
+        }
+      ]
+    },
+    {
+      "name": "Promo Service_AWS",
+      "results": [
+        {
+          "latest": "System.ApplicationException"
+        }
+      ]
+    },
+    {
+      "name": "Plan Service_OP",
+      "results": [
+        {
+          "latest": "Symfony\\Component\\Debug\\Exception\\FatalErrorException"
+        }
+      ]
+    },
+    {
+      "name": "Fulfillment Service_AWS",
+      "results": [
+        {
+          "latest": "StandardError"
+        }
+      ]
+    },
+    {
+      "name": "Fulfillment Service_OP",
+      "results": [
+        {
+          "latest": "Sinatra::NotFound"
+        }
+      ]
+    },
+    {
+      "name": "Plan Service_AWS",
+      "results": [
+        {
+          "latest": "ErrorException"
+        }
+      ]
+    },
+    {
+      "name": "WebPortal_AWS",
+      "results": [
+        {
+          "latest": "/favicon.ico"
+        }
+      ]
+    }
+  ],
+  "totalResult": {
+    "results": [
+      {
+        "latest": "StandardError"
+      }
+    ]
+  },
+  "unknownGroup": {
+    "results": [
+      {
+        "latest": "/favicon.ico"
+      }
+    ]
+  },
+  "metadata": {
+    "eventTypes": [
+      "TransactionError"
+    ],
+    "eventType": "TransactionError",
+    "openEnded": true,
+    "beginTime": "2020-02-26T21:36:53Z",
+    "endTime": "2020-02-26T22:36:53Z",
+    "beginTimeMillis": 1582753013742,
+    "endTimeMillis": 1582756613742,
+    "rawSince": "60 MINUTES AGO",
+    "rawUntil": "NOW",
+    "rawCompareWith": "",
+    "guid": "2bcdc62f-631d-85ad-bbde-198b80d6d096",
+    "routerGuid": "4dfb6d56-4137-b9a2-9d46-61f01754a9a3",
+    "messages": [],
+    "facet": "appName",
+    "offset": 0,
+    "limit": 10,
+    "contents": {
+      "messages": [],
+      "contents": [
+        {
+          "function": "latest",
+          "attribute": "error.class",
+          "simple": true
+        }
+      ]
+    }
+  }
+}
