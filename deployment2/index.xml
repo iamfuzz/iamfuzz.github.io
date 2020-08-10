@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deployment - US West 1 on New Relic Workshops</title>
+    <link>http://www.newrelic.com/deployment2/</link>
+    <description>Recent content in Deployment - US West 1 on New Relic Workshops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Aug 2020 10:05:24 -0400</lastBuildDate>
+    
+	<atom:link href="http://www.newrelic.com/deployment2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

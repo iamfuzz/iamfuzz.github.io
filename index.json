@@ -1,0 +1,78 @@
+[
+{
+	"uri": "http://www.newrelic.com/prerequisites/",
+	"title": "Prerequisites",
+	"tags": [],
+	"description": "",
+	"content": " Account Access In order to complete this workshop, you will need access to an AWS account and a New Relic account. The workloads deplpoyed in this lab should not exceed the free tier limits of either service.\nWe highly recommend that you use either newly created accounts, or existing sandbox environments, rather than production accounts.\nKnowledge and Experience Before proceeding with this Workshop, we highly recommend that you have a basic understanding and working knowledge of the following technologies:\n AWS Console CloudFormation Templates New Relic One  "
+},
+{
+	"uri": "http://www.newrelic.com/",
+	"title": "Welcome!",
+	"tags": [],
+	"description": "",
+	"content": " Welcome to the New Relic Cloud Migration Workshop! For this workshop, you will be working as the web architect for a small startup, which means you\u0026rsquo;ll have to do it all: setup the Wordpress-powered website, setup monitoring for Wordpress and its underlying infrastructure, and setup monitoring for your web traffic.\nObjectives  Deploy the following compents using CloudFormation:  Wordpress MySQL New Relic\u0026rsquo;s Infrastructure agent New Relic\u0026rsquo;s PHP APM agent New Relic Browser  Create a Workload that includes the Wordpress application and its underlying host instance Migrate the Workload to a different AWS region Learn about continual cost optimization in AWS using New Relic  "
+},
+{
+	"uri": "http://www.newrelic.com/deployment/",
+	"title": "Deployment - US East 1",
+	"tags": [],
+	"description": "",
+	"content": " Deployment - US East 1 First, download the CloudFormation template that will be used to deploy your Wordpress stack. Then, in CloudFormation, from the Create Stack dropdown menu, select With new resources (standard). The CloudFormation link above will launch this CloudFormation stack in the US East 1 AWS region. Do not choose a different region. You will also need to create a key pair in this region before proceeding.\nCreate Stack Wizard - Step 1 In the Create Stack wizard, select the Upload a template file radio button, and then provide the CloudFormation template you recently downloaded by clicking on Choose File:\nOnce you have selected the lab1_NewRelic-WP-Infra-APM.template CloudFormation template from the file dialog, you should be returned to the Create Stack Wizard. Click the orange Next button on the bottom right hand side of your screen.\nCreate Stack Wizard - Step 2 You will now need to name your stack; we recommend using New-Relic-Wordpress as that is the name that will be used in the example screenshots below:\nNext, you will choose a key pair from the first dropdown menu in the Parameters section of the wizard:\nNow, you will need to provide your New Relic license key:\nLastly, provide the username and password parameters needed by Wordpress and click the orange Next button on the bottom right hand side of your screen:\nCreate Stack Wizard - Step 3 Nothing needs to be configured in step 3 of the Create Stack Wizard; simply scroll down and click the orange Next button on the bottom right side of your screen.\nCreate Stack Wizard - Step 4 Review the parameters you have provided to see if you have made any obvious errors. If not, simply scroll down and click the orange Create stack button on the bottom right side of your screen.\nVerification Before moving on in the Workshop, ensure your Wordpress stack was launched successfully by visiting the Stacks page. You should see a green entry CREATE_COMPLETE in the status column for your stack. This can take a few minutes, so refresh the page periodically until the process has completed.\n"
+},
+{
+	"uri": "http://www.newrelic.com/workloads/",
+	"title": "Creating a Workload",
+	"tags": [],
+	"description": "",
+	"content": " What is a Workload? New Relic\u0026rsquo;s Workloads feature gives you the ability to group and monitor entities based on a team or a set of responsibilities, from front-end to back-end services, across your entire stack.\nWorkloads help you understand complex systems, detect issues, understand the cause and impact of an incident, and resolve those issues quickly.\nWhen migrating applications to the cloud, New Relic recommends that you group all of your software stacks into Workloads.\nIn this Workshop, we will be creating a single Workload from our application and underlying host instance and migrating it from one AWS region to another.\nCreating a Workload Open the New Relic One Workloads application and click on the Create a workload button located at the top right hand corner of your screen.\nGive your Workload a name (we recommend New-Relic-Wordpress) and click the Create a workload button on the bottom right hand side of your screen:\nClick on the Add entities link located near the top right hand portion of your screen:\nIn the search bar, type in php and press Enter on your keyboard. Click on the + icons next to the two entries for PHP Application: Service and Browser application. (Applications in New Relic are referred to as services) Then, click on the Save changes button on the bottom right hand side of your screen.\nIf you click on the Entities tab near the top left hand side of your screen, you should now see the two entities you just added to your Workload:\nClick back over to the Overview tab and once again click on the Add entities link. This time, type Host into the search bar, wait for the Hosts ENTITY TYPE recommendation in the dropdown, and then select it:\nIf you created a new AWS account for this workshop, you should only see one host listed. Click the + icon, followed by clicking the Save changes button to add it to your Workload:\nIf you are using an AWS account with other running instances, you can locate the instance for this Workshop by visting the Stacks page and clicking on the link of the stack name you created for this Workshop (New-Relic-Wordpress):\nYou can then click on the Resources tab and click on the link provided under the Physical ID column for the WebServer that was launched by the template:\nBy default, your instance hostname will be determined by its private IP:\nOnce you have successfully added the host to your Workload, you should be presented with an overview page that looks similar to the one below:\nCongratulations! You have successfully created a New Relic Workload. You may now move on to the next step in this Workshop.\n"
+},
+{
+	"uri": "http://www.newrelic.com/migrate/",
+	"title": "Migrating a Workload",
+	"tags": [],
+	"description": "",
+	"content": " Migrating a Workload New Relic provides an application named Nimbus that allows you to track the migration of your Workloads in real time. Normally, you\u0026rsquo;d use Nimbus to create Workloads from your on-prem estate and migrate them to a cloud provider such as AWS. In this Workshop however, we will simply be migrating the Workload we have created from one AWS region to another.\nLet\u0026rsquo;s start by opening Nimbus and clicking on the Migrate Workloads link in Getting Started menu near the top left hand side of your screen:\nYou should see the New-Relic-Wordpress Workload listed that we created in the previous step in this Workshop. Click the green Migrate button:\nIn the popup dialog you are presented with, select your New Relic acocunt name from the first dropdown box while ensuring the other dropdowns match what you see in the screenshot below, then click the green Create Project button:\nWhen you clicked on the Create Project button in the previous step, Nimbus automatically created an empty, target Workload that it will use to track your migration progress. Open this Workload by clicking on the link provided in the Target column of your Workload listing:\nMake sure to keep the target Workload browser tab open as we will be revisiting it later in this Workshop.\nCongratulations! You have successfully prepared your Workload for migration and may now move on to the next step in this Workshop.\n"
+},
+{
+	"uri": "http://www.newrelic.com/deployment2/",
+	"title": "Deployment - US West 1",
+	"tags": [],
+	"description": "",
+	"content": " Deployment - US West 1 In this exercise, we will be deploying the same Wordpress stack that we previously deployed to the US East 1 region into the US West 1 region instead.\nFirst, download the CloudFormation template that will be used to deploy your Wordpress stack, if needed. Then, in CloudFormation, from the Create Stack dropdown menu, select With new resources (standard). The CloudFormation link above will launch this CloudFormation stack in the US West 1 AWS region. Do not choose a different region. You will also need to create a key pair in this region before proceeding.\nCreate Stack Wizard - Step 1 In the Create Stack wizard, select the Upload a template file radio button, and then provide the CloudFormation template you recently downloaded by clicking on Choose File:\nOnce you have selected the lab1_NewRelic-WP-Infra-APM.template CloudFormation template from the file dialog, you should be returned to the Create Stack Wizard. Click the orange Next button on the bottom right hand side of your screen.\nCreate Stack Wizard - Step 2 You will now need to name your stack; we recommend using New-Relic-Wordpress as that is the name that will be used in the example screenshots below:\nNext, you will choose a key pair from the first dropdown menu in the Parameters section of the wizard:\nNow, you will need to provide your New Relic license key:\nLastly, provide the username and password parameters needed by Wordpress and click the orange Next button on the bottom right hand side of your screen:\nCreate Stack Wizard - Step 3 Nothing needs to be configured in step 3 of the Create Stack Wizard; simply scroll down and click the orange Next button on the bottom right side of your screen.\nCreate Stack Wizard - Step 4 Review the parameters you have provided to see if you have made any obvious errors. If not, simply scroll down and click the orange Create stack button on the bottom right side of your screen.\nVerification Before moving on in the Workshop, ensure your Wordpress stack was launched successfully by visiting the Stacks page. You should see a green entry CREATE_COMPLETE in the status column for your stack. This can take a few minutes, so refresh the page periodically until the process has completed.\n"
+},
+{
+	"uri": "http://www.newrelic.com/target/",
+	"title": "Updating the Target Workload",
+	"tags": [],
+	"description": "",
+	"content": " Updating the Target Workload In this exercize, we will add the application and underlying host of the recently deployed Wordpress stack in US West 2 into the empty target workload that Nimbus created for us previously. This process will be nearly identical to the Creating a Workload step you completed earlier.\nOpen up the browser tab to the target workload Overview page and click on the Edit workload link at the top right hand corner of your screen:\nIn the search bar, type in php and press Enter on your keyboard. Click on the + icons next to the two entries for PHP Application: Service and Browser application. (Applications in New Relic are referred to as services) Then, click on the Save changes button on the bottom right hand side of your screen.\nIf you click on the Entities tab near the top left hand side of your screen, you should now see the two entities you just added to your Workload:\nSince we didn\u0026rsquo;t name the application deployed in US West 1 differently than that of the application deployed in US West 2, New Relic treats them as the same application running on separate host instances.\nClick back over to the Overview tab and click on the Edit workload link once again. This time, type Host into the search bar, wait for the Hosts ENTITY TYPE recommendation in the dropdown, and then select it:\nIf you created a new AWS account for this workshop, you should now see two hosts listed: one for each AWS region that you have deployed the Wordpress stack in. Click the + icon next to the instance deployed in US West 2, followed by clicking the Save changes button to add it to your Workload:\nIf you are using an AWS account with other running instances, you can locate the instance for this Workshop by visting the Stacks page and clicking on the link of the stack name you created for this Workshop (New-Relic-Wordpress):\nYou can then click on the Resources tab and click on the link provided under the Physical ID column for the WebServer that was launched by the template:\nBy default, your instance hostname will be determined by its private IP:\nOnce you have successfully added the host to your Workload, you should be presented with an overview page that looks similar to the one below:\nCongratulations! You have successfully updated your target Workload. You may now move on to the next step in this Workshop.\n"
+},
+{
+	"uri": "http://www.newrelic.com/optimization/",
+	"title": "Continual Optimization",
+	"tags": [],
+	"description": "",
+	"content": " Continual Optimization In the cloud, it\u0026rsquo;s important to look regularly and closely at how your applications and services are architected and utilized. It\u0026rsquo;s the best way to identify opportunities that will let you right-size your instances.\nIn this Workshop, the CloudFormation Template provided automatically instrumented your Wordpress application and underlying host instance with New Relic\u0026rsquo;s APM, Browser, and Infrastructure agents. Instrumentation is the first step in the ongoing effort to continually optimize your cloud environment.\nCloud Optimize New Relic offers a free, open source application named Cloud Optimize that compares the size of your instances to their utilization, identifying resources that are sized larger than needed. Cloud Optimize will estimate your savings by optimizing resource size.\nUnlike other applications that charge a per host fee for this level of information, Cloud Optimize is free of charge for all New Relic customers.\n"
+},
+{
+	"uri": "http://www.newrelic.com/conclusion/",
+	"title": "Conclusion",
+	"tags": [],
+	"description": "",
+	"content": " Congratulations! You have successfully completed the New Relic Cloud Migration Workshop! We hope that in doing so you have learned:\n Why instrumentation of your applications and hosts is important What Workloads in New Relic consist of and how they can be used to track cloud migration efforts using Nimbus How New Relic\u0026rsquo;s Cloud Optimize application can be used to continually optimize your cloud environment  Cleanup To avoid any future costs, we recommend that you now visit the US East 1 Stacks page and the US West 1 Stacks page and delete the New-Relic-Wordpress stacks you created there.\nThank You! Thank you for taking the time to learn more about New Relic and how it can be used to accelerate cloud migrations. You might also be interested in exploring our other workshops:\n AWS Modernization Workshop: Observability AWS Serverless with New Relic One  "
+},
+{
+	"uri": "http://www.newrelic.com/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.newrelic.com/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
